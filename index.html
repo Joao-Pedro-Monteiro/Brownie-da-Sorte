@@ -29,11 +29,18 @@
 </div>
 
 <div class="overlay" id="overlay">
-  <div class="popup">
-    <h2>🎉 Parabéns!</h2>
+  <div class="popup" id="resultPopup">
+    <h2>🎉 Parabéns! <p name="username"></p></h2>
     <p style="color:#f5e6c8;font-family:'Nunito',sans-serif;font-weight:700;margin-bottom:4px;">Você ganhou:</p>
     <div class="prize-label" id="prizeText"></div>
     <button class="close-btn" onclick="document.location.reload()">Ótimo! 🍫</button>
+  </div>
+
+  <div class="popup" id="loginPopup">
+    <h2>Quem será o sortudo?</h2>
+    <input type="text" name="username" id="usernameInput" placeholder="Digite seu nome aqui" class="username-input">
+    <div class="prize-label" id="prizeText"></div>
+    <button class="close-btn" onclick="usernameRegistration(), backgroundMusic('play')">Boa Sorte!</button>
   </div>
 </div>
 </body>
