@@ -4,42 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0. maximum-scale=1.0, user-scalable=no">
 <title>Roleta de Brownies</title>
-<!-- API -->
 <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
-<!-- css -->
 <link href="./style/style.css" type="text/css" rel="stylesheet">
-<!-- js -->
-<script src="./js/script.js"></script>
-<script src="./js/music.js"></script>
-
-
-</head> 
+<script src="./js/prize.js" defer></script>
+<script src="./js/script.js" defer></script>
+</head>
 <body>
 <div class="page-wrapper">
-
   <div class="wheel-section">
     <div class="wheel-container">
       <div class="wheel-pointer">
         <img src="./images/seta.svg" alt="Ponteiro da Roleta">
       </div>
-      <img id="wheel" class="wheel-img" src="./images/Roleta.svg" alt="Roleta" onclick="spinWheel()" />
+      <img id="wheel" class="wheel-img" src="./images/Roleta.svg" alt="Roleta" onclick="spinWheel()">
     </div>
   </div>
-
 </div>
 
 <div class="overlay" id="overlay">
   <div class="popup" id="resultPopup">
-    <h2>🎉 Parabéns! <p name="username"></p></h2>
-    <p style="color:#f5e6c8;font-family:'Nunito',sans-serif;font-weight:700;margin-bottom:4px;">Você ganhou:</p>
+    <h2>Parabens! <span id="resultUsername"></span></h2>
+    <p style="color:#f5e6c8;font-family:'Nunito',sans-serif;font-weight:700;margin-bottom:4px;">Voce ganhou:</p>
     <div class="prize-label" id="prizeText"></div>
-    <button class="close-btn" onclick="document.location.reload()">Ótimo! 🍫</button>
+    <button class="close-btn" onclick="document.location.reload()">Otimo!</button>
   </div>
 
   <div class="popup" id="loginPopup">
-    <h2>Quem será o sortudo?</h2>
+    <h2>Quem sera o sortudo?</h2>
     <input type="text" name="username" id="usernameInput" placeholder="Digite seu nome aqui" class="username-input">
-    <div class="prize-label" id="prizeText"></div>
     <button class="close-btn" onclick="usernameRegistration(), backgroundMusic('play')">Boa Sorte!</button>
   </div>
 </div>
