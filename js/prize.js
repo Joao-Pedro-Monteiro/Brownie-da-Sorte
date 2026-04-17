@@ -53,7 +53,9 @@ const STORAGE_KEYS = {
   listIndex: "brownie.listIndex",
   list: "brownie.list",
   position: "brownie.position",
-  username: "brownie.username"
+  username: "brownie.username",
+  users: "brownie.users",
+  spinHistory: "brownie.spinHistory"
 };
 
 const PRIZE_MAP = {
@@ -77,6 +79,26 @@ const PRIZE_MAP = {
 let list = [];
 let listIndex = null;
 let position = 0;
+
+function readStorageArray(key) {
+  const rawValue = localStorage.getItem(key);
+
+  if (!rawValue) {
+    return [];
+  }
+
+  try {
+    const parsedValue = JSON.parse(rawValue);
+    return Array.isArray(parsedValue) ? parsedValue : [];
+  } catch (error) {
+    console.error(`[Prize] Falha ao recuperar dados da chave ${key}.`, error);
+    return [];
+  }
+}
+
+function saveStorageArray(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
 
 function logPrizeState(message, extra = {}) {
   console.log(`[Prize] ${message}`, {
@@ -213,9 +235,65 @@ function controller() {
   };
 }
 
+function addUserToHistory(username) {
+  const trimmedUsername = typeof username === "string" ? username.trim() : "";
+
+  if (!trimmedUsername) {
+    return [];
+  }
+
+  const usersHistory = readStorageArray(STORAGE_KEYS.users);
+  const updatedHistory = [
+    ...usersHistory,
+    {
+      username: trimmedUsername,
+      registeredAt: new Date().toISOString()
+    }
+  ];
+
+  saveStorageArray(STORAGE_KEYS.users, updatedHistory);
+  logPrizeState("Usuario adicionado ao historico", {
+    username: trimmedUsername,
+    totalUsers: updatedHistory.length
+  });
+  return updatedHistory;
+}
+
+function addSpinToHistory(username, prizeResult) {
+  const trimmedUsername = typeof username === "string" ? username.trim() : "";
+
+  if (!trimmedUsername || !prizeResult || !prizeResult.code) {
+    return [];
+  }
+
+  const spinHistory = readStorageArray(STORAGE_KEYS.spinHistory);
+  const updatedHistory = [
+    ...spinHistory,
+    {
+      username: trimmedUsername,
+      prizeCode: prizeResult.code,
+      prizeLabel: prizeResult.label,
+      position: prizeResult.position,
+      listIndex: prizeResult.listIndex,
+      createdAt: new Date().toISOString()
+    }
+  ];
+
+  saveStorageArray(STORAGE_KEYS.spinHistory, updatedHistory);
+  logPrizeState("Sorteio registrado no historico", {
+    username: trimmedUsername,
+    prizeCode: prizeResult.code,
+    totalSpins: updatedHistory.length
+  });
+  return updatedHistory;
+}
+
 window.controller = controller;
 window.getCurrentPrizeEntry = getCurrentPrizeEntry;
 window.setList = setList;
 window.restorePrizeState = restorePrizeState;
 window.clearPrizeState = clearPrizeState;
 window.STORAGE_KEYS = STORAGE_KEYS;
+window.readStorageArray = readStorageArray;
+window.addUserToHistory = addUserToHistory;
+window.addSpinToHistory = addSpinToHistory;

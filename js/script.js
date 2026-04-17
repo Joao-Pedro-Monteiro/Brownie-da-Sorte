@@ -104,14 +104,25 @@ function spinWheel() {
     return;
   }
 
+  const savedUsername = (localStorage.getItem(STORAGE_KEYS.username) || "").trim();
+
+  if (!savedUsername) {
+    document.getElementById("overlay").classList.add("show");
+    document.getElementById("loginPopup").style.display = "block";
+    document.getElementById("usernameInput").focus();
+    logWheel("Tentativa de sorteio sem usuario identificado");
+    return;
+  }
+
   const prizeResult = getCurrentPrizeEntry();
+  addSpinToHistory(savedUsername, prizeResult);
   const totalRotation = calculateTotalRotation(prizeResult.angle);
 
   isSpinning = true;
   logWheel("Sorteio iniciado", prizeResult);
 
   if (isBackgroundMusicPlaying) {
-    backgroundMusicMP3.volume = 0.2;
+    backgroundMusicMP3.volume = 0.375;
   }
 
   wheelSound("play");
@@ -193,6 +204,7 @@ function usernameRegistration() {
   }
 
   localStorage.setItem(STORAGE_KEYS.username, username);
+  addUserToHistory(username);
   document.getElementById("overlay").classList.remove("show");
   document.getElementById("resultPopup").style.display = "none";
   document.getElementById("loginPopup").style.display = "none";
@@ -202,21 +214,21 @@ function usernameRegistration() {
 function initializeApp() {
   const state = controller();
   const savedUsername = localStorage.getItem(STORAGE_KEYS.username);
+  const usernameInput = document.getElementById("usernameInput");
 
   document.getElementById("resultPopup").style.display = "none";
+  document.getElementById("overlay").classList.add("show");
+  document.getElementById("loginPopup").style.display = "block";
 
-  if (savedUsername) {
-    document.getElementById("overlay").classList.remove("show");
-    document.getElementById("loginPopup").style.display = "none";
-    logWheel("Aplicacao iniciada com usuario ja salvo", {
-      username: savedUsername,
-      state
-    });
-  } else {
-    document.getElementById("overlay").classList.add("show");
-    document.getElementById("loginPopup").style.display = "block";
-    logWheel("Aplicacao iniciada aguardando identificacao do usuario", state);
+  if (usernameInput) {
+    usernameInput.value = ""; // Limpa o campo de entrada para evitar confusão
+    usernameInput.focus();
   }
+
+  logWheel("Aplicacao iniciada aguardando identificacao do usuario", {
+    username: savedUsername || null,
+    state
+  });
 }
 
 document.addEventListener("DOMContentLoaded", initializeApp);
