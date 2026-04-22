@@ -238,7 +238,7 @@ function controller() {
 function addUserToHistory(username) {
   const trimmedUsername = typeof username === "string" ? username.trim() : "";
 
-  if(username == 'teste' || username == 'TESTE' || username == 'Teste'){
+  if(trimmedUsername.toLowerCase() === 'teste'){
     return []; //* Ignora entradas de teste para manter o historico limpo
   } 
   
@@ -266,7 +266,7 @@ function addUserToHistory(username) {
 function addSpinToHistory(username, prizeResult) {
   const trimmedUsername = typeof username === "string" ? username.trim() : "";
 
-  if(username == 'teste' || username == 'TESTE' || username == 'Teste'){
+  if(trimmedUsername.toLowerCase() === 'teste'){
     console.log("Entrada de teste detectada, ignorando registro no historico", { username });
     return []; //* Ignora entradas de teste para manter o historico limpo
   }

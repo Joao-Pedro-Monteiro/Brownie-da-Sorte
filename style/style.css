@@ -12,6 +12,10 @@ img{
     user-select: none;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 body {
     min-height: 100vh;
     background: #5a2d0c;
