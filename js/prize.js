@@ -1,51 +1,51 @@
 const catalogo = [
   [
     "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3",
-    "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3",
+    "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3",
     "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3",
     "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3",
-    "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS",
+    "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3","BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS",
     "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3",
     "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3",
     "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3",
     "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3",
-    "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "100_REAIS"
+    "BROWNIE_GRATIS", "C2L3", "C2L3", "BROWNIE_GRATIS","C2L3", "C2L3", "100_REAIS"
   ],
   [
-    "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3",
-    "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3",
+    "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3",
+    "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS",  "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3",
     "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS",
     "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3",
     "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3",
     "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3",
-    "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3",
-    "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3",
+    "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3",
+    "BROWNIE_GRATIS", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3",
     "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3",
     "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "100_REAIS"
   ],
   [
-    "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3",
-    "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3",
+    "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3",
+    "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3",
     "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3",
     "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3",
-    "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3",
+    "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "BROWNIE_GRATIS", "C2L3",
     "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3",
+    "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3","BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3",
+    "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3",
     "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3",
-    "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3",
-    "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3",
-    "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "100_REAIS"
+    "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "100_REAIS"
   ],
   [
-    "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS",
+    "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "BROWNIE_GRATIS",
     "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3",
     "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS",
-    "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3",
+    "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3",
     "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS",
-    "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3",
+    "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3",
     "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS",
-    "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3",
+    "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3",
     "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS",
-    "C2L3", "C2L3", "C2L3", "C2L3", "C2L3", "100_REAIS"
+    "C2L3", "C2L3", "C2L3", "BROWNIE_GRATIS", "C2L3", "100_REAIS"
   ]
 ];
 
@@ -238,6 +238,10 @@ function controller() {
 function addUserToHistory(username) {
   const trimmedUsername = typeof username === "string" ? username.trim() : "";
 
+  if(username == 'teste' || username == 'TESTE' || username == 'Teste'){
+    return []; //* Ignora entradas de teste para manter o historico limpo
+  } 
+  
   if (!trimmedUsername) {
     return [];
   }
@@ -261,6 +265,11 @@ function addUserToHistory(username) {
 
 function addSpinToHistory(username, prizeResult) {
   const trimmedUsername = typeof username === "string" ? username.trim() : "";
+
+  if(username == 'teste' || username == 'TESTE' || username == 'Teste'){
+    console.log("Entrada de teste detectada, ignorando registro no historico", { username });
+    return []; //* Ignora entradas de teste para manter o historico limpo
+  }
 
   if (!trimmedUsername || !prizeResult || !prizeResult.code) {
     return [];
