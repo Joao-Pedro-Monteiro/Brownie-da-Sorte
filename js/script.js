@@ -89,15 +89,6 @@ function winSound(action) {
   }
 }
 
-window.addEventListener("dblclick", () => {
-  if (isBackgroundMusicPlaying) {
-    backgroundMusic("pause");
-    return;
-  }
-
-  backgroundMusic("play");
-});
-
 function spinWheel() {
   if (isSpinning) {
     logWheel("Tentativa ignorada porque a roleta ainda esta girando");
@@ -231,8 +222,25 @@ function initializeApp() {
   });
 }
 
+//* LISTENNERS
 document.addEventListener("DOMContentLoaded", initializeApp);
 
+// Música
+window.addEventListener("dblclick", () => {
+  if (isBackgroundMusicPlaying) {
+    backgroundMusic("pause");
+    return;
+  }
+
+  backgroundMusic("play");
+});
+
+// Historico
+document.getElementById("historySection").addEventListener("dblclick", () => {
+  window.location.href = "reset.html";
+});
+
+//*EXPONDO FUNCOES
 window.backgroundMusic = backgroundMusic;
 window.wheelSound = wheelSound;
 window.winSound = winSound;
